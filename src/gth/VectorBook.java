@@ -46,12 +46,16 @@ public class VectorBook {
 		Scanner sc = new Scanner(System.in);
 		
 		Vector v = new Vector();
-		Book b1 = new Book("ABC",1,90);
-		Book b2 = new Book("PQR",2,100);
-		Book b3 = new Book("XYZ",3,120);
+		Book b1 = new Book("ABC",1,100);
+		Book b2 = new Book("MNO",2,200);
+		Book b3 = new Book("PQR",3,300);
+		Book b4 = new Book("STV",4,400);
+		
 		v.add(b1);
 		v.add(b2);
 		v.add(b3);
+		v.add(b4);
+
 		
 		System.out.println("Display Book Data:");
 		Iterator itr= v.iterator();
@@ -61,6 +65,23 @@ public class VectorBook {
 			Book b = (Book) obj;
 			
 			System.out.println(b.getId()+"\t"+b.getName()+"\t"+b.getPrice());
+		}
+		System.out.println("Enter book id for search");
+		int bid=sc.nextInt();
+		boolean flag=false;
+		for(int i=0;i<v.size();i++) {
+			
+			 Book b=(Book)v.get(i);
+			 if(b.getId()==bid) {
+				 flag=true;
+				 break;
+			 }
+		}
+		if(flag) {
+			System.out.println("Book found");
+		}
+		else {
+			System.out.println("Book not found");
 		}
 
 	}
