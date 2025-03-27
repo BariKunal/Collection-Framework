@@ -36,12 +36,18 @@ public class Stack_operations {
 				}
 				break;
 			case 3:
+				b = kb.isEmpty();
+				if(b)
+				{
+					System.out.println("Stack is Empty..");
+				}
+				else {
 				ListIterator itr = kb.listIterator(kb.size());
 				while(itr.hasPrevious())
 				{
 					System.out.println(itr.previous());
 				}
-				
+				}
 				break;
 			case 4:
 				b = kb.isEmpty();
