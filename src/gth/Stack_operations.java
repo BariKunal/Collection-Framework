@@ -66,7 +66,6 @@ public class Stack_operations {
 				default:
 					System.out.println("Invalid Input...");
 			}
-			
 		}while(true);
 		
 
