@@ -12,7 +12,7 @@ class Book
 	{
 		
 	}
-	Book(int id,String name,int price)
+	Book(String name,int id,int price)
 	{
 		this.id=id;
 		this.name=name;
