@@ -12,10 +12,10 @@ public class Collections_classOperations {
 		al.add(90);
 		al.add(40);
 		
-		Object maxVal = Collections.max(al);
-		System.out.println("Max value from ArrayList is "+maxVal);
-		Object minVal = Collections.min(al);
-		System.out.println("Min value from ArrayList is "+minVal);
+		Object maxValue = Collections.max(al);
+		System.out.println("Max value from ArrayList is "+maxValue);
+		Object minValue = Collections.min(al);
+		System.out.println("Min value from ArrayList is "+minValue);
 		Collections.sort(al);
 		System.out.println(al);
 		Collections.reverse(al);
