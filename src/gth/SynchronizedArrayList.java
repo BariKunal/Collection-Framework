@@ -12,9 +12,6 @@ public class SynchronizedArrayList {
 		
 		List l=Collections.synchronizedList(al);	//It creates the arraylist synchronozed.
 		System.out.println(l);
-	
-		
-
 	}
 
 }
