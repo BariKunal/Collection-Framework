@@ -27,6 +27,18 @@ class Employee{
 	public void setName(String name) {
 		this.name = name;
 	}	
+	public boolean equals(Object obj) {
+		Employee e = (Employee)obj;
+		if(this.id==e.id && this.name.equals(e.name)) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	public int hashCode() {
+		return id*1000;
+	}
 }
 public class StoreDuplicate_Data {
 
