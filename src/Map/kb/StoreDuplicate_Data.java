@@ -29,7 +29,7 @@ class Employee{
 	}	
 	public boolean equals(Object obj) {
 		Employee e = (Employee)obj;
-		if(this.id==e.id && this.name.equals(e.name)) {
+		if(this.id==e.id && this.name.equals(e.name)){
 			return true;
 		}
 		else {
