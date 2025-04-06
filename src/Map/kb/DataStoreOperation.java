@@ -68,7 +68,7 @@ public class DataStoreOperation {
 				
 				break;
 				default :
-					System.out.println("Invalid Choice...");
+					System.out.println("Invalid Choice!...");
 			}
 		}while(true);
 	}
