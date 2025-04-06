@@ -2,11 +2,12 @@ package Map.kb;
 import java.util.*;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
-class Company{
+class Product{
 	private int id;
 	private String name;
 	
-	Company(int id, String name){
+	public Product(int id, String name){
+		super();
 		this.id=id;
 		this.name=name;
 	}
@@ -28,39 +29,38 @@ public class Company_Production_Machines {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		LinkedHashMap map = new LinkedHashMap();
-		Company c = new Company(1,"a");
-		Company c1 = new Company(2,"b");
-		Company c2 = new Company(3,"c");
+		LinkedHashMap map=new LinkedHashMap();
 		
-		ArrayList al = new ArrayList();
-		al.add(c);
-		al.add(c1);
-		al.add(c2);
+		Product p1=new Product(1,"a");
+		Product p2=new Product(2,"b");
+		Product p3=new Product(3,"c");
 		
-		ArrayList al1 = new ArrayList();
-		al.add(c);
-		al.add(c1);
-		al.add(c2);
+		ArrayList al=new ArrayList();
+		al.add(p1);
+		al.add(p2);
+		al.add(p3);
 		
-		map.put("M001", al);
-		map.put("M002", al1);
+		ArrayList al2=new ArrayList();
+		al2.add(p1);
+		al2.add(p2);
+		al2.add(p3);
 		
-		LinkedHashMap map2 = new LinkedHashMap();
-		map2.put("Production 1", al);
-		map2.put("Production 2", al1);
+		map.put("M001",al);
+		map.put("M002",al2);
+		
+		LinkedHashMap map2=new LinkedHashMap();
+		
+		map2.put("Production_one", map);
+		map2.put("Production_two", map);
 		
 		Set<Map.Entry> entrySet=map2.entrySet();
-		for(Map.Entry m:entrySet) {
-			Object key = m.getKey();
-			System.out.println("________"+key+"________");
-			System.out.println("_______________________");
+		for(Map.Entry m:entrySet)
+		{
+			Object key=m.getKey();
+			System.out.println(""+key+"_");
+			System.out.println("_");
 			
-			Object val = m.getValue();
-			System.out.println("________"+val+"________");
-			System.out.println("_______________________");
-			
-			
+			Object val=m.getValue();
 			LinkedHashMap a1=(LinkedHashMap)val;
 			
 			Set<Map.Entry> entrySet1=a1.entrySet();
@@ -69,17 +69,16 @@ public class Company_Production_Machines {
 				String mName=(String)o.getKey();
 				ArrayList prod=(ArrayList)o.getValue();
 				System.out.println(mName);
-				System.out.println("__________________");
+				System.out.println("_");
 				System.out.println("ID \t Tname ");
 				
 				for(Object o1:prod)
 				{
-					Company pp=(Company)o1;
+					Product pp=(Product)o1;
 					System.out.println(pp.getId()+"\t"+pp.getName());
 				}
 			}
-		}	
+		}
 	}
 
 }
-
