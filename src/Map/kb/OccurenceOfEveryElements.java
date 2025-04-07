@@ -1,5 +1,6 @@
 package Map.kb;
 import java.util.*;
+
 public class OccurenceOfEveryElements {
 
 	public static void main(String[] args) {
