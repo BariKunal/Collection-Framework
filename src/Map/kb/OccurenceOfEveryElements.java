@@ -6,12 +6,14 @@ public class OccurenceOfEveryElements {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner (System.in);
 		LinkedHashMap map = new LinkedHashMap();
-		int a[] = new int[10];
+		System.out.println("Enter The Array Size :");
+		int size = sc.nextInt();
+		int a[] = new int[size];
 		System.out.println("Enter The Values In Array :");
-		for(int i=0; i<a.length; i++) {
+		for(int i=0; i<size; i++) {
 			a[i]=sc.nextInt();
 		}
-		for(int i=0; i<a.length; i++) {
+		for(int i=0; i<size; i++) {
 			Object obj = map.get(a[i]);
 			Integer count = (Integer)obj;
 			if(count==null) {
