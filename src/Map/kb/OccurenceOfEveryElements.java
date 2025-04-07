@@ -22,7 +22,7 @@ public class OccurenceOfEveryElements {
 		}
 		System.out.println("Display Occurence Of Every Elements :");
 		Set<Map.Entry> entrySet = map.entrySet();
-		for(Map.Entry m:entrySet) {
+		for(Map.Entry m:entrySet){
 			System.out.println(m.getKey()+"\t"+m.getValue());
 		}
 	}
