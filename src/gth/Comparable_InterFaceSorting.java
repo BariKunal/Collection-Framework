@@ -42,7 +42,7 @@ class Player implements Comparable {
 	}
 
 	public void ShowPlayer() {
-		System.out.println("-----Player Details-----");
+//		System.out.println("-----Player Details-----");
 		System.out.println("ID\tName\tRun");
 		System.out.println(id+"\t"+name+"\t"+run);
 		System.out.println("------------------------");
